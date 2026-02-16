@@ -1,0 +1,32 @@
+# Simplified SNO Deployer configuration
+#
+# Usage:
+#   python sno_deploy.py deploy --config sno_config.yaml
+#   python sno_deploy.py deploy --config sno_config.yaml --resume
+#   python sno_deploy.py teardown --config sno_config.yaml
+#   python sno_deploy.py teardown --config sno_config.yaml --full
+
+name: "vm-sno"
+version: "4.19.0-nightly"
+base_dns_domain: "redhat.com"
+ntp_source: "clock.redhat.com"
+pull_secret: "./pull_secret.json"
+
+master:
+  name: "sno-master"
+  ip: "192.168.122.41"
+  mac: "52:54:00:00:00:01"
+  cpu: 8
+  ram: 32768       # MB
+  disk_size: 48    # GB
+  # os_variant: "rhel9.4"  # optional, defaults to rhel9.4
+
+bridge:
+  ip: "192.168.122.1"
+  mask: "255.255.0.0"
+  dhcp_range: "192.168.122.100-192.168.122.254"
+
+# Optional:
+# kubeconfig: "/root/kubeconfig.vm-sno"
+# proxy: "http://proxy.example.com:8080"
+# noproxy: "localhost,127.0.0.1,.redhat.com"

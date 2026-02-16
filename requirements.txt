@@ -1,0 +1,4 @@
+aicli
+PyYAML
+requests
+python-hosts
