@@ -26,16 +26,16 @@ Use the same `sno_config.yaml` as in the repo (customize `name`, `version`, `mas
 
 ```bash
 # Resume after a failure (skips completed steps)
-python sno_deploy.py deploy --config sno_config.yaml --resume
+python sno_deploy.py --config sno_config.yaml deploy --resume
 
 # Remove the cluster and VM; keep the AI pod
-python sno_deploy.py teardown --config sno_config.yaml
+python sno_deploy.py --config sno_config.yaml teardown
 
 # Remove the cluster, VM, and stop the AI pod
-python sno_deploy.py teardown --config sno_config.yaml --full
+python sno_deploy.py --config sno_config.yaml teardown --full
 
 # Show saved state for this cluster
-python sno_deploy.py state --config sno_config.yaml
+python sno_deploy.py --config sno_config.yaml state
 ```
 
 ---
