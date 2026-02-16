@@ -2,7 +2,7 @@
 
 This README describes how the **simplified Single Node OpenShift (SNO) deployer** works and how to run it. The script is `sno_deploy.py`; it uses a single config file and the Assisted Installer to deploy one SNO cluster in a VM on the same host.
 
-Based on https://github.com/bn222/cluster-deployment-automation
+Based on https://github.com/bn222/cluster-deployment-automation, simplified by Claude Opus 4.6.
 
 ---
 
